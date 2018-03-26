@@ -23,7 +23,6 @@
     "webpack-cli": "^2.0.13"
   },
   "dependencies": {
-    "aws-sdk": "^2.213.1",
     "babel-loader": "^7.1.4",
     "babel-preset-es2017": "^6.24.1",
     "sweetalert": "^2.1.0"
