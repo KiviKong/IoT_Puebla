@@ -99,7 +99,7 @@ html {
     background-color: #f7f9fb;
 }
 
-.info input[type=radio] {
+.info input[type=checkbox] {
     margin-top: 20px;
     margin-left: 10px;
 }
