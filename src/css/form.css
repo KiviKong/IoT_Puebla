@@ -122,6 +122,14 @@ html {
     background-color:  #acdcf4; 
 }
 
+.info select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #f7f9fb;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #2d5c75;
     opacity: 1; /* Firefox */
