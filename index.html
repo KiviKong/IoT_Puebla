@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./src/css/form.css"  inline>
+
+    <title>Control de Visitantes</title>
+  </head>
+  <body style="background-color:#f7f9fb">      
+      <section>
+
+        <div class="container" id ="actionChooser" style="visibility: visible">          
+          <div class="contaiter-1 header">            
+            <h1>CONTROL DE VISTANTES</h1>
+            <h3>ITESO, Universidad Jesuita De Guadalajara</h3>
+          </div>
+          <div class="contaiter-2" style="padding-bottom: 80px">
+              <div class="info">
+                <input class="item-1" type="submit" id="btnRegistrar" value="REGISTRAR VISITA">
+                <input class="item-2" type="submit" id="btnFinalizar" value="REGISTRAR SALIDA">
+              </div>
+            </div>
+        </div>
+
+        <div class="container" id="registerForm" style="visibility: hidden">
+          <div class="contaiter-1 header">
+            <h1>REGISTRO</h1>
+            <h3>ITESO, Universidad Jesuita De Guadalajara</h3>
+          </div>
+          <div class="contaiter-2">
+            <div class="info">
+              <input class="item-1" type="text" id="name" placeholder="Nombre">
+              <input class="item-2" type="text" id="curp" placeholder="CURP">
+              <input class="item-3" type="text" id="age" placeholder="Edad">
+              <input class="item-4" type="text" id="tel" placeholder="Tel">
+            </div>
+          </div>
+          <div class="contaiter-3">
+            <div class="info">
+              <input class="item-1" type="text" id="x" placeholder="X">
+              <input class="item-2" type="text" id="y" placeholder="Y">
+              <input class="item-3" type="text" id="device" placeholder="Dispositivo">
+              <div class="item-4"><input type="checkbox" name="turist" id="turist" checked value="yes"> Turista <br></div>
+            </div>
+          </div>
+          <div class="container-4" style="padding-bottom: 40px;">
+            <div class="info">
+              <input class="item-2" type="submit" value="REGISTRAR" id="aws">
+            </div>
+          </div>
+        </div>
+
+        <div class="container" id="finalizeForm" style="visibility: hidden">
+            <div class="contaiter-1 header">
+              <h1>FINALIZAR VISITA</h1>
+              <h3>ITESO, Universidad Jesuita De Guadalajara</h3>
+            </div>
+            <div class="contaiter-2" style="padding-left: 200px">
+              <div class="info">
+                <input class="item-1" type="text" id="deviceID" placeholder="Num. de Tarjeta">
+              </div>
+            </div>
+            <div class="container-4" style="padding-bottom: 40px;">
+              <div class="info">
+                <input class="item-2" type="submit" value="ENVIAR" id="btnTerminarVisita">
+              </div>
+            </div>
+          </div>
+      </section>
+      <script src="./dist/bundle.js"></script>
+  </body>
+</html>
