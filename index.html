@@ -8,9 +8,23 @@
 
     <title>Getting Started</title>
   </head>
-  <body style="background-color:#f7f9fb">
+  <body style="background-color:#f7f9fb">      
       <section>
-        <div class="container">
+
+        <div class="container" id ="actionChooser" style="visibility: visible">          
+          <div class="contaiter-1 header">            
+            <h1>CONTROL DE VISTANTES</h1>
+            <h3>ITESO, Universidad Jesuita De Guadalajara</h3>
+          </div>
+          <div class="contaiter-2" style="padding-bottom: 80px">
+              <div class="info">
+                <input class="item-1" type="submit" id="btnRegistrar" value="REGISTRAR VISITA">
+                <input class="item-2" type="submit" id="btnFinalizar" value="REGISTRAR SALIDA">
+              </div>
+            </div>
+        </div>
+
+        <div class="container" id="registerForm" style="visibility: hidden">
           <div class="contaiter-1 header">
             <h1>REGISTRO</h1>
             <h3>ITESO, Universidad Jesuita De Guadalajara</h3>
@@ -37,6 +51,23 @@
             </div>
           </div>
         </div>
+
+        <div class="container" id="finalizeForm" style="visibility: hidden">
+            <div class="contaiter-1 header">
+              <h1>FINALIZAR VISITA</h1>
+              <h3>ITESO, Universidad Jesuita De Guadalajara</h3>
+            </div>
+            <div class="contaiter-2" style="padding-left: 200px">
+              <div class="info">
+                <input class="item-1" type="text" id="deviceID" placeholder="Num. de Tarjeta">
+              </div>
+            </div>
+            <div class="container-4" style="padding-bottom: 40px;">
+              <div class="info">
+                <input class="item-2" type="submit" value="ENVIAR" id="btnTerminarVisita">
+              </div>
+            </div>
+          </div>
       </section>
       <script src="./dist/bundle.js"></script>
   </body>
