@@ -4,7 +4,6 @@ $('#alerta').click( () => {
     swal('Hello world');
 });
 
-
 $('#btnRegistrar').click( () => {    
     
     document.getElementById('actionChooser').style="visibility: hidden";
@@ -30,7 +29,8 @@ $('#btnTerminarVisita').click( () => {
         if (willSend) {
 
             let data = {
-                "deviceid": document.getElementById('deviceID').value
+                "deviceID": document.getElementById('deviceID').value,
+                "fechaSalida": new Date().toLocaleString()
             };
         
             $.ajax({
@@ -75,16 +75,21 @@ $('#aws').click( () => {
     .then((willSend) => {
 
         if (willSend) {
+            // Get coordinates from chosen building            
+            let coord_x, coord_y, coords;
+            coords = getBuildingCoords();
+            coord_x = coords.x.toString();
+            coord_y = coords.y.toString();
 
             let data = {
-                "x": document.getElementById("x").value, 
-                "y": document.getElementById("y").value, 
+                "x": coord_x,
+                "y": coord_y,
                 "deviceID": document.getElementById("device").value,
                 "name": document.getElementById("name").value,
                 "age": document.getElementById("age").value,
                 "curp": document.getElementById("curp").value,
                 "tel": document.getElementById("tel").value,
-                "turist": $("#turist").prop('checked'), 
+                "registro": new Date().toLocaleString()
             }
 
             console.log(data);
@@ -119,5 +124,57 @@ $('#aws').click( () => {
 
     
 });
+
+var getBuildingCoords = () => {
+    let coordX, coordY;    
+    let selector = document.getElementById('buildingChooser');    
+    let selectedBuilding = selector.options[selector.selectedIndex].label;
+
+    switch (selectedBuilding) {
+        case 'Edificio A':
+            coordX = 5;
+            coordY = 4;
+            break;        
+        case 'Edificio B':
+            coordX = 3;
+            coordY = 9;
+            break;
+        case 'Edificio C':
+            coordX = 6;
+            coordY = 12;
+            break;
+        case 'Edificio D':
+            coordX = 6;
+            coordY = 16;
+            break;
+        case 'Edificio E':
+            coordX = 14;
+            coordY = 15;
+            break;
+        case 'Edificio F':
+            coordX = 12;
+            coordY = 12;
+            break;
+        case 'Edificio G':
+            coordX = 16;
+            coordY = 10;
+            break;
+        case 'Edificio H':
+            coordX = 12;
+            coordY = 6;
+            break;
+        case 'Edificio M':
+            coordX = 15;
+            coordY = 2;
+            break;
+        default:
+            break;
+    }
+
+    return {
+        x: coordX,
+        y: coordY
+    };
+}
 
 
