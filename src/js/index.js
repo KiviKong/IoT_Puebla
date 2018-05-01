@@ -163,7 +163,7 @@ var getBuildingCoords = () => {
             coordX = 12;
             coordY = 6;
             break;
-        case 'Edificio M':
+        case 'Edificio K':
             coordX = 15;
             coordY = 2;
             break;
@@ -172,8 +172,8 @@ var getBuildingCoords = () => {
     }
 
     return {
-        x: coordX,
-        y: coordY
+        x: coordY,
+        y: coordX
     };
 }
 
